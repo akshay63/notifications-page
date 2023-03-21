@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700&family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Manrope:wght@500;700&family=Montserrat:wght@500;700&family=Oswald:wght@400;500;600;700&family=Overpass:wght@400;700&family=Plus+Jakarta+Sans:wght@500;800&family=Roboto:wght@500;700&display=swap");
+
+/* CSS RESET AND VARIABLES */
+:root {
+  --color-primary-blue: hsl(219, 85%, 26%);
+  --color-primary-red: hsl(1, 90%, 64%);
+  --color-sec-very-light-gray-blue: hsl(210, 60%, 98%);
+  --color-sec-light-gray-blue-1: hsl(211, 68%, 94%);
+  --color-sec-light-gray-blue-1: hsl(205, 33%, 90%);
+  --color-sec-gray-blue: hsl(219, 14%, 63%);
+  --color-sec-dark-gray-blue: hsl(219, 12%, 42%);
+  --color-sec-dark-blue: hsl(224, 21%, 14%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--color-sec-very-light-gray-blue);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  color: var(--color-sec-dark-blue);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--color-sec-dark-blue);
+  text-decoration: underline;
+}
+
+.attribution a:hover {
+  color: var(--color-primary-blue);
+  background-color: var(--color-primary-red);
+}
+
+ul {
+  list-style: none;
+}
+
+/*------ Notifications Page ---------*/
+.notifications {
+  max-width: 732px;
+  width: 100%;
+  padding: 38px 33px;
+  background: var(--color-white);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.title h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-sec-dark-blue);
+  display: flex;
+  align-items: center;
+}
+
+.title .count {
+  font-size: 16px;
+  font-weight: bold;
+  height: 25px;
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  border-radius: 5px;
+  margin-left: 12px;
+  padding: 10px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification {
+  display: flex;
+}
+
+.notification img {
+  margin-right: 10px;
+  width: 46px;
+  height: 46px;
+}
