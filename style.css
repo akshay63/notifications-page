@@ -106,6 +106,10 @@ ul {
   justify-content: center;
 }
 
+.title .markBtn {
+  color: var(--color-sec-gray-blue);
+}
+
 .notification {
   display: flex;
   padding: 17px 20px;

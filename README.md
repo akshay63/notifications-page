@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/responsive-stats-card-component-using-html-css-tailwindcss-HSXReFgyY5](https://www.frontendmentor.io/solutions/responsive-stats-card-component-using-html-css-tailwindcss-HSXReFgyY5)
-- Live Site URL: [https://stats-preview-card-component-rho-two.vercel.app/](https://stats-preview-card-component-rho-two.vercel.app/)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-notification-card-component-cqxkMzOkqZ](https://www.frontendmentor.io/solutions/responsive-notification-card-component-cqxkMzOkqZ)
+- Live Site URL: [https://notifications-page-theta.vercel.app/)
 
 ## My process
 
