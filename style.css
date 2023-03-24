@@ -6,7 +6,7 @@
   --color-primary-red: hsl(1, 90%, 64%);
   --color-sec-very-light-gray-blue: hsl(210, 60%, 98%);
   --color-sec-light-gray-blue-1: hsl(211, 68%, 94%);
-  --color-sec-light-gray-blue-1: hsl(205, 33%, 90%);
+  --color-sec-light-gray-blue-2: hsl(205, 33%, 90%);
   --color-sec-gray-blue: hsl(219, 14%, 63%);
   --color-sec-dark-gray-blue: hsl(219, 12%, 42%);
   --color-sec-dark-blue: hsl(224, 21%, 14%);
@@ -32,10 +32,12 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   font-family: "Plus Jakarta Sans", sans-serif;
   background: var(--color-sec-very-light-gray-blue);
+  padding: 62px;
+  overflow-x: hidden;
 }
 
 a {
@@ -43,6 +45,11 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style: none;
+}
+
+/* Attribute */
 .attribution {
   position: absolute;
   bottom: 5px;
@@ -60,17 +67,13 @@ a {
   background-color: var(--color-primary-red);
 }
 
-ul {
-  list-style: none;
-}
-
 /*------ Notifications Page ---------*/
 .notifications {
   max-width: 732px;
   width: 100%;
-  padding: 38px 33px;
+  padding: 34px 32px;
   background: var(--color-white);
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.3); */
   border-radius: 15px;
 }
 
@@ -78,11 +81,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 .title h3 {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 800;
   color: var(--color-sec-dark-blue);
   display: flex;
@@ -90,14 +93,14 @@ ul {
 }
 
 .title .count {
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: bold;
   height: 25px;
   background-color: var(--color-primary-blue);
   color: var(--color-white);
   border-radius: 5px;
   margin-left: 12px;
-  padding: 10px 11px;
+  padding: 12px 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,10 +108,112 @@ ul {
 
 .notification {
   display: flex;
+  padding: 17px 20px;
+  border-radius: 10px;
+  color: var(--color-sec-dark-gray-blue);
+  transition: background-color 0.2s ease-out;
 }
 
-.notification img {
-  margin-right: 10px;
+.notification:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.notification .text-cont p:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.notification .userimg {
+  margin-right: 19px;
+  width: 44px;
+  height: 44px;
+}
+
+.notification .chess-img {
+  margin-left: auto;
   width: 46px;
   height: 46px;
+}
+
+.notification .name {
+  font-weight: bold;
+  margin-right: 5px;
+  color: var(--color-sec-dark-blue);
+}
+
+.notification .time {
+  color: var(--color-sec-gray-blue);
+}
+
+.notification .comment {
+  padding: 18px;
+  margin-top: 15px;
+  border: 1px solid var(--color-sec-light-gray-blue-2);
+  border-radius: 5px;
+}
+
+.notification .type {
+  margin-left: 5px;
+}
+
+.notification .notification-type-1 .type {
+  color: var(--color-sec-dark-gray-blue);
+  font-weight: bold;
+}
+
+.notification .notification-type-2 .type {
+  color: var(--color-primary-blue);
+  font-weight: bold;
+}
+
+.notification.unread {
+  background-color: var(--color-sec-very-light-gray-blue);
+}
+
+.notification.unread:hover {
+  background-color: none;
+}
+
+.notification:hover {
+  background-color: var(--color-sec-very-light-gray-blue);
+}
+
+.notification.unread .notification-type .active {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary-red);
+  display: inline-block;
+  margin-left: 3px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 58%;
+  }
+
+  body {
+    padding: 0px;
+    flex-direction: column;
+  }
+
+  .attribution {
+    position: relative;
+    bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .notifications {
+    padding: 17px 16px;
+    border-radius: 0;
+  }
+
+  .notification {
+    padding: 14px;
+  }
+
+  .notification .chess-img {
+    display: none;
+  }
 }
